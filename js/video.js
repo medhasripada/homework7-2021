@@ -53,4 +53,12 @@ document.querySelector("#pause").addEventListener("click", function() {
 	 document.querySelector("#volume").innerHTML = vol + "%";
  });
 
- 
+ document.querySelector("#vintage").addEventListener("click", function() {
+	document.querySelector("#player1").className= "oldSchool";
+
+ });
+
+ document.querySelector("#orig").addEventListener("click", function() {
+	document.querySelector("#player1").className= "video";
+
+ });
