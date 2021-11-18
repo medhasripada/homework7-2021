@@ -6,6 +6,8 @@ window.addEventListener("load", function() {
 });
 
 document.querySelector("#play").addEventListener("click", function() {
+	var vol= document.querySelector("#slider").value;
+	document.querySelector("#volume").innerHTML = vol + "%";
 	console.log("Play Video");
 	video.play();
  });
