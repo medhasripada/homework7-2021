@@ -25,6 +25,15 @@ document.querySelector("#pause").addEventListener("click", function() {
 	console.log("New speed is: " + video.playbackRate);
  });
 
+ document.querySelector("#skip").addEventListener("click", function() {
+	if(video.currentTime +15 > video.duration){
+		video.currentTime = 0;
+	}
+	else{
+		video.currentTime = video.currentTime + 15;
+	}
+	console.log("New location " + video.currentTime);
+ });
 
  document.querySelector("#mute").addEventListener("click", function() {
 	if(video.muted){
@@ -36,3 +45,12 @@ document.querySelector("#pause").addEventListener("click", function() {
 		video.muted = true;
 	}
  });
+
+ document.querySelector("#slider").addEventListener("click", function() {
+	 var vol= document.querySelector("#slider").value;
+	 video.volume= vol/100;
+	 console.log("New volume is: " + video.volume);
+	 document.querySelector("#volume").innerHTML = vol + "%";
+ });
+
+ 
